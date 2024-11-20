@@ -1,0 +1,135 @@
+.heroCtn{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 100px 0;
+
+    .hero{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      
+    }
+    
+    
+    .wellBtn{
+        border: 1px solid #000;
+        border-radius: 20px;
+        padding: 6px 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    .healthContent{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        font-size: 86px;
+
+        .healthCtnt{
+             display: flex;
+             align-items: center;
+             gap: 30px;
+             border-radius: 20px;
+
+                .videoCtn{
+                width: 254px;
+                height: 78px;
+                border-radius: 20px;
+
+                img{
+                    width: 254px;
+                    height: 78px;
+                    border-radius: 20px;
+                    
+                }
+            } 
+        }
+    }
+
+    .specBtn{
+        padding: 15px 20px;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .getBtn{
+        padding: 15px 20px;
+        border: none;
+        outline: none;
+        background-color: #D6FF01;
+        font-size: 16px;
+        cursor: pointer;
+
+
+    }
+
+    .btnsContainer{
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .heroAnimatedCont{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 30px;
+        height: 134px;
+        overflow: hidden;
+        position: relative;
+
+
+
+        .animatedTexts{
+        animation: moveLeft 20s infinite;
+       
+        }
+
+        // .leftBlur{
+        //     position: absolute;
+        //     left: 0;
+        //     height: 900px;
+        //     width: 134px;
+        //     z-index: 2;
+        //     background: url("../../images/Ellipse\ 1.png") no-repeat;
+        //     background-position: center;
+        // }
+        // .rightBlur{
+        //     position: absolute;
+        //     right: 0;
+        //     height: 900px;
+        //     width: 134px;
+        //     border-radius: 10%;
+        //     z-index: 2;
+        //     background: url("../../images/Ellipse\ 2.png") no-repeat;
+        
+        // }
+       
+    }
+
+    @keyframes moveLeft {
+      
+        0%{
+            transform: translateX(100vw);
+
+        }
+      
+        100%{
+            transform: translateX(-4vw);
+
+        }      
+       
+    }
+
+    
+}
