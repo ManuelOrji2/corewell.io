@@ -1,0 +1,5 @@
+./clear
+./node_modules
+./public
+
+./dist

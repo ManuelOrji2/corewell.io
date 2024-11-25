@@ -1,0 +1,32 @@
+.testiSec {
+  width: 100vw;
+  height: 70vh;
+  padding: 0 100px 0;
+  box-sizing: border-box;
+
+  .testimonies {
+    overflow: hidden;
+    width: 200%;
+
+    .testimony {
+      animation: moveLeft 13s infinite;
+      animation-timing-function: cubic-bezier(0.6, 0.6, 0.6, 0.6);
+    }
+
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(0vw);
+      }
+
+      100% {
+        transform: translateX(-65vw);
+      }
+    }
+  }
+
+  .testimonies:hover {
+    .testimony {
+      animation-play-state: paused;
+    }
+  }
+}
