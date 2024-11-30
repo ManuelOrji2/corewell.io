@@ -1,0 +1,9 @@
+.details {
+  @apply w-[679px] text-[16px] text-[#646464];
+  height: 0;
+  display: none;
+}
+
+.showDetails {
+  display: block;
+}

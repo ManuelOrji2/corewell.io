@@ -1,23 +1,26 @@
-// import { useEffect, useRef} from "react";
-import Experts from "./components/Experts/Experts";
-import Features from "./components/Features/Features";
-import Hero from "./components/Hero/Hero";
-import Nav from "./components/Nav/Nav";
-import OurStory from "./components/OurStory/OurStory";
-import ResourceHub from "./components/ResourceHub/ResourceHub";
-import Testimonies from "./components/Testimonies/Testimonies";
+import Features from "./pages/Features/Features";
+import Appointment from "./pages/Appointment/Appointment";
+import Home from "./pages/Home/Home";
+import Pricing from "./pages/Pricing/Pricing";
+import Resources from "./pages/Resources/Resources";
+import Layout from "./pages/Layout/Layout";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
 
 function App() {
   return (
-    <main className="flex flex-col items-center container m-auto px-[75px] ">
-      <Nav />
-      <Hero />
-      <ResourceHub />
-      <Features />
-      <Experts />
-      <Testimonies />
-      <OurStory />
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/appointment" element={<Appointment />} />
+          <Route path="/resources" element={<Resources />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

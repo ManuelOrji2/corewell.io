@@ -1,5 +1,10 @@
 .ourstorySec {
   width: 100vw;
   height: 100vh;
-  background: url("../../images/storybg.png") no-repeat;
+  background: url("../../images/storybg.png");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 100px 100px;
 }

@@ -1,9 +1,39 @@
 import logo from "../../images/Corewell.io.png";
 import styles from "./Nav.module.scss";
 import { useRef, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
+interface navLink {
+  name: string;
+  target: string;
+  plus: string;
+}
+
+const navLinks: navLink[] = [
+  {
+    name: "Features",
+    target: "/features",
+    plus: "+",
+  },
+  {
+    name: "Pricing",
+    target: "/pricing",
+    plus: "+",
+  },
+  {
+    name: "Appointment",
+    target: "/appointment",
+    plus: "+",
+  },
+  {
+    name: "Resources",
+    target: "/resources",
+    plus: "",
+  },
+];
 const Nav = () => {
   const navRef: any = useRef();
+  const location = useLocation();
 
   useEffect(() => {
     window.onscroll = () => {
@@ -18,17 +48,29 @@ const Nav = () => {
 
   return (
     <nav ref={navRef} className={`${styles.nav}`}>
-      <div>
+      <Link to="/">
         <img src={logo} alt="" />
-      </div>
+      </Link>
       <div className={styles.navlinks}>
-        <div>Features</div>
-        <div>+</div>
-        <div>Pricing</div>
-        <div>+</div>
-        <div>Appointment</div>
-        <div>+</div>
-        <div>Resources</div>
+        {navLinks.map((navLink) => (
+          <div className="flex items-center gap-6">
+            <div className={styles.navlink}>
+              <Link
+                className={
+                  location.pathname === navLink.target
+                    ? `flex flex-col line-through`
+                    : `${styles.linkTexts} flex flex-col `
+                }
+                to={navLink.target}
+              >
+                <span>{navLink.name}</span>
+                <span>{navLink.name}</span>
+              </Link>
+            </div>
+
+            <div>{navLink.plus}</div>
+          </div>
+        ))}
       </div>
       <button className={styles.button}>Get started</button>
     </nav>

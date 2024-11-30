@@ -67,7 +67,7 @@ const Features = () => {
         </div>
         <img src={learnMoreIcon} alt="" />
       </div>
-      <div className="grid grid-cols-3 grid-rows-2 items-center pt-40">
+      <div className="grid grid-cols-3 grid-rows-2 items-center py-36">
         {featuresCardDetails.map((data) => (
           <Card data={data} />
         ))}
