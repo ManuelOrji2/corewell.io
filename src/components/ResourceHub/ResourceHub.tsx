@@ -14,25 +14,67 @@ type resHubDatum = {
   img: string;
   imgTag: string;
   description: string;
+  row: number;
 };
 
-const resHubData: resHubDatum[] = [
+export const resHubData: resHubDatum[] = [
   {
     img: resHubImg1,
     imgTag: "Course",
     description: mindfulExpImg,
+    row: 1,
   },
   {
     img: resHubImg2,
     imgTag: "Course",
     description: fitPlanImg,
+    row: 1,
   },
   {
     img: resHubImg3,
     imgTag: "Program",
     description: dietaryImg,
+    row: 1,
+  },
+  {
+    img: resHubImg1,
+    imgTag: "Course",
+    description: mindfulExpImg,
+    row: 2,
+  },
+  {
+    img: resHubImg2,
+    imgTag: "Course",
+    description: fitPlanImg,
+    row: 2,
+  },
+  {
+    img: resHubImg3,
+    imgTag: "Program",
+    description: dietaryImg,
+    row: 2,
+  },
+  {
+    img: resHubImg1,
+    imgTag: "Course",
+    description: mindfulExpImg,
+    row: 3,
+  },
+  {
+    img: resHubImg2,
+    imgTag: "Course",
+    description: fitPlanImg,
+    row: 3,
+  },
+  {
+    img: resHubImg3,
+    imgTag: "Program",
+    description: dietaryImg,
+    row: 3,
   },
 ];
+
+const filteredResHubData = resHubData.filter((data) => data.row === 3);
 
 const ResourceHub = () => {
   return (
@@ -47,7 +89,7 @@ const ResourceHub = () => {
         <img src={expMoreImg} alt="" />
       </div>
       <div className={`${styles.resHubCourses} pt-10`}>
-        {resHubData.map((datum, i) => (
+        {filteredResHubData.map((datum, i) => (
           <div className={styles.resHubCourse} key={i}>
             <img width={440} height={290} alt="" src={datum.img} />
             <span>{datum.imgTag}</span>

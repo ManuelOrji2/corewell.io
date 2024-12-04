@@ -1,0 +1,50 @@
+.resCourses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  cursor: pointer;
+
+  .resCourse {
+    position: relative;
+    overflow: hidden;
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+
+    span {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background-color: #fff;
+      padding: 10px 12px;
+    }
+
+    .resCourseText {
+      position: absolute;
+      transform: translateY(0);
+      left: 15px;
+      transition: all 0.5s ease-in-out;
+    }
+    .resCourseTextHover {
+      transform: translateY(20px);
+    }
+  }
+
+  .resCourse:hover {
+    filter: none;
+
+    .resCourseText {
+      transform: translateY(-60px);
+    }
+  }
+
+  .resCourse:hover:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.2;
+  }
+}
