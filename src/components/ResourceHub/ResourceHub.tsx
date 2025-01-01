@@ -1,21 +1,23 @@
 import styles from "./ResourceHub.module.scss";
+import { Link } from "react-router-dom";
+
 import resHubImg1 from "../../images/Rectangle 6.png";
 import resHubImg2 from "../../images/Rectangle 7.png";
 import resHubImg3 from "../../images/Rectangle 8.png";
 
 import expMoreImg from "../../images/Group 20.png";
-import progCrseImg from "../../images/Group 18.png";
+import progCrseImg from "../../images/prog&courses.png";
 
 import mindfulExpImg from "../../images/Group 25.png";
 import fitPlanImg from "../../images/Group 22.png";
 import dietaryImg from "../../images/Group 22 (1).png";
 
-type resHubDatum = {
+export interface resHubDatum {
   img: string;
   imgTag: string;
   description: string;
   row: number;
-};
+}
 
 export const resHubData: resHubDatum[] = [
   {
@@ -90,13 +92,13 @@ const ResourceHub = () => {
       </div>
       <div className={`${styles.resHubCourses} pt-10`}>
         {filteredResHubData.map((datum, i) => (
-          <div className={styles.resHubCourse} key={i}>
+          <Link to="/resources" className={styles.resHubCourse} key={i}>
             <img width={440} height={290} alt="" src={datum.img} />
             <span>{datum.imgTag}</span>
             <div className={styles.resHubCourseText}>
               <img src={datum.description} alt="" />
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

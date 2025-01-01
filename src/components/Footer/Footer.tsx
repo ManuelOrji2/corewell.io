@@ -64,6 +64,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <div className="flex items-center justify-center">
+        <span className="text-[14px]">
+          Corewell.io © 2024. All right reserved.
+        </span>
+      </div>
     </div>
   );
 };

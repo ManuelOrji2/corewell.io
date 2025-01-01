@@ -1,0 +1,6 @@
+.experts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 0 0 100px;
+}

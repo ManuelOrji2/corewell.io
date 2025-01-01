@@ -1,10 +1,10 @@
 .nav {
   display: flex;
   align-items: center;
-  width: 90vw;
+  width: 91vw;
   justify-content: space-between;
-  padding: 10px 30px;
-  margin: 10px 30px;
+  padding: 16px 24px;
+  margin: 10px;
   box-sizing: border-box;
   position: fixed;
   z-index: 100;
@@ -24,6 +24,8 @@
       }
       .linkTexts:hover {
         transform: translateY(-24px);
+        text-decoration: underline;
+        text-decoration-line: 5px solid;
       }
     }
   }
@@ -42,6 +44,11 @@
 .active {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 1px 5px 2px rgb(202, 202, 202);
+  background: #fff;
+  // border-radius: 20px;
+  // box-shadow: 0 1px 15px 1px rgb(151, 148, 148);
+  box-shadow:
+    rgba(0, 0, 0, 0.11) 0px 0.48175px 2.40875px -1.16667px,
+    rgba(0, 0, 0, 0.098) 0px 1.83083px 9.15413px -2.33333px,
+    rgba(0, 0, 0, 0.047) 0px 8px 40px -3.5px;
 }

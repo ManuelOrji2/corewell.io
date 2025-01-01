@@ -1,41 +1,11 @@
 .expSec {
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   box-sizing: border-box;
 
   .experts {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    .expert {
-      position: relative;
-      overflow: hidden;
-      transition: all 0.5s ease-in-out;
-
-      img {
-        filter: grayscale(100%);
-        transition: all 0.5s ease-in-out;
-      }
-
-      .imgTag {
-        position: absolute;
-        top: 4px;
-        right: 4px;
-        background-color: #fff;
-        padding: 10px 12px;
-      }
-
-      .bookAptmentBtn {
-        background-color: #d6ff01;
-        padding: 15px 20px;
-      }
-    }
-
-    img:hover {
-      filter: none;
-      transform: scale(1.1);
-      overflow: hidden;
-    }
   }
 }

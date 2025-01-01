@@ -6,6 +6,7 @@
   gap: 40px;
   padding-bottom: 40px;
   cursor: pointer;
+  //   height: 100vh;
 
   .resCourse {
     position: relative;
@@ -19,6 +20,8 @@
       right: 4px;
       background-color: #fff;
       padding: 10px 12px;
+      font-family: "Supply-Regular";
+      font-weight: 400;
     }
 
     .resCourseText {

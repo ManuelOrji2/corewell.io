@@ -2,15 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url(https://db.onlinewebfonts.com/c/d95bf2f30035a050142565e03d44da71?family=Aeonik);
+
+@import url(https://db.onlinewebfonts.com/c/bf68c70425cf45335fd9b72b7e1ebb2c?family=Copyright+Type+Supply);
+
+@font-face {
+  src: local("./fonts/SupplyMono-FreeForPersonalUse/Supply-Regular.otf"),
+    url("./fonts/SupplyMono-FreeForPersonalUse/Supply-Regular.otf"),
+    format("truetype");
+  font-family: "Supply-Regular";
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family:
+    "Aeonik",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url("../src/images/MacBook\ Pro\ 16_\ -\ 2.png");
   overflow-x: hidden;
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
 code {

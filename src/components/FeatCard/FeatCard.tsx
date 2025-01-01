@@ -11,8 +11,9 @@ type CardProps = {
 const Card: FC<CardProps> = ({ data }) => {
   return (
     <div className="w-[509px] h-[378px] flex flex-col gap-8 p-16 py-10">
-      <img src={data.img} alt="" width={40} height={40} />
+      <img src={data.img} alt="" width={60} height={70} />
       <div className="flex flex-col gap-4">
+        {" "}
         <h3 className="font-bold">{data.header}</h3>
         <p>{data.description}</p>
       </div>

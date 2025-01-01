@@ -1,14 +1,14 @@
 import styles from "./Features.module.scss";
-import yourWellnessIcon from "../../images/Group 18 (2).png";
+import yourWellnessIcon from "../../images/wellnesstools.png";
 import learnMoreIcon from "../../images/Group 20 (2).png";
 
-import searchIcon from "../../images/ph_magnifying-glass-bold.png";
-import heartIcon from "../../images/ph_heartbeat.png";
-import videoIcon from "../../images/fluent_video-16-regular.png";
-import healthTrackIcon from "../../images/cil_bar-chart.png";
-import bookIcon from "../../images/akar-icons_book.png";
-import commIcon from "../../images/akar-icons_book.png";
-import Card from "../Card/Card";
+import symptomCheckerIcon from "../../images/symptom checker isocon.png";
+import heartIcon from "../../images/Personalized wellness isocon.png";
+import virtualConsultIcon from "../../images/Virtual consultation isocon.png";
+import healthTrackIcon from "../../images/Health tracker isocon.png";
+import eduResIcon from "../../images/Educational resources isocon.png";
+import commIcon from "../../images/comm support isocon.png";
+import FeatCard from "../FeatCard/FeatCard";
 
 export interface CardDetails {
   img: string;
@@ -18,7 +18,7 @@ export interface CardDetails {
 
 const featuresCardDetails: CardDetails[] = [
   {
-    img: searchIcon,
+    img: symptomCheckerIcon,
     header: "Symptom Checker",
     description:
       "Easily identify potential conditions by entering your symptoms and get trusted health information instantly.",
@@ -30,7 +30,7 @@ const featuresCardDetails: CardDetails[] = [
       "Get tailored health and wellness plans based on your needs, whether for fitness, nutrition, or mental well-being.",
   },
   {
-    img: videoIcon,
+    img: virtualConsultIcon,
     header: "Virtual Consultations",
     description:
       "Connect with health experts through secure, virtual appointments from the comfort of your home. seemless access.",
@@ -42,7 +42,7 @@ const featuresCardDetails: CardDetails[] = [
       "Monitor your health metrics in real-time, gaining actionable insights to understand your body better. Track your progress toward fitness and wellness.",
   },
   {
-    img: bookIcon,
+    img: eduResIcon,
     header: "Educational Resources",
     description:
       "Access a comprehensive library of articles, guides, and actionable tips to stay informed on a wide range of health topics.",
@@ -69,7 +69,7 @@ const Features = () => {
       </div>
       <div className="grid grid-cols-3 grid-rows-2 items-center py-36">
         {featuresCardDetails.map((data) => (
-          <Card data={data} />
+          <FeatCard data={data} />
         ))}
       </div>
     </section>

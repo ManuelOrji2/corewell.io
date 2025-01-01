@@ -72,7 +72,9 @@ const Nav = () => {
           </div>
         ))}
       </div>
-      <button className={styles.button}>Get started</button>
+      <Link to="/sign-in">
+        <button className={styles.button}>Get started</button>
+      </Link>
     </nav>
   );
 };

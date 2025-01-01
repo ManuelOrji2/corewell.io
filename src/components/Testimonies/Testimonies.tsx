@@ -1,4 +1,4 @@
-import realStoriesImg from "../../images/Real stories.png";
+import realStoriesImg from "../../images/realstories.png";
 import styles from "./Testimonies.module.scss";
 
 interface storyCard {
@@ -18,7 +18,7 @@ const testimony: storyCard[] = [
     name: "Michael P., CoreWell Member",
     story:
       "I was nervous about finding the right specialist for my concerns, but CoreWell made it so simple. Within minutes, I booked an appointment with a top-notch cardiologist who provided incredible guidance. It’s like having a healthcare partner right at my fingertips!",
-    review: "5 Star review",
+    review: "4 Star review",
   },
   {
     name: "Emily T., CoreWell Member",
@@ -36,7 +36,7 @@ const testimony: storyCard[] = [
     name: "Lila R., CoreWell Member",
     story:
       "I was nervous about finding the right specialist for my concerns, but CoreWell made it so simple. Within minutes, I booked an appointment with a top-notch cardiologist who provided incredible guidance. It’s like having a healthcare partner right at my fingertips!",
-    review: "4 Star review",
+    review: "5 Star review",
   },
 ];
 

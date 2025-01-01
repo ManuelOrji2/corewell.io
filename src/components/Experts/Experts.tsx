@@ -1,43 +1,130 @@
 import styles from "./Experts.module.scss";
+import ExpertCard from "../ExpertCard/ExpertCard";
+import fiveStars from "../../images/Five stars.png";
+import fourStars from "../../images/four  stars.png";
+import fourPointFiveStars from "../../images/4.5 stars.png";
 
 import DrUmar from "../../images/Dr. Umar.png";
 import DrEmily from "../../images/Dr. Emily.png";
 import DrHassan from "../../images/Dr. Hassan.png";
 
-import meetExpImg from "../../images/meetExp.png";
+import meetExpImg from "../../images/experts.png";
 import viewAllImg from "../../images/view all.png";
 
-type expertDetail = {
+export interface expertDetail {
   img: string;
   imgTag: string;
   name: string;
-  attendedInst: string;
+  niche: string;
+  experience: string;
+  rating: string;
   bookAptment: string;
-};
+  group: number;
+}
 
-const expertData: expertDetail[] = [
+export const expertData: expertDetail[] = [
   {
     img: DrUmar,
     imgTag: "Cardiologist",
     name: "Dr. Umar Azar",
-    attendedInst: "M.D., Harvard University",
+    // niche: "M.D., Harvard University",
+    niche: "Cardiologist (M.D)",
+    experience: "10+ years of experience in cardiology",
+    rating: fiveStars,
     bookAptment: "Book appointment with Dr. Umar",
+    group: 1,
   },
   {
     img: DrEmily,
     imgTag: "Gynaecologist",
     name: "Dr. Emily Brown",
-    attendedInst: "M.D., Johns Hopkins University",
+    // niche: "M.D., Johns Hopkins University",
+    niche: "Gynaecologist (M.D)",
+    experience: "10+ years of experience in Gynaecology",
+    rating: fourStars,
     bookAptment: "Book appointment with Dr. Emily",
+    group: 1,
   },
   {
     img: DrHassan,
     imgTag: "Andrologist",
     name: "Dr. Umar Azar",
-    attendedInst: "M.D., Stanford University",
+    // niche: "M.D., Stanford University",
+    niche: "Andrologist (M.D)",
+    experience: "10+ years of experience in Andrology",
+    rating: fourPointFiveStars,
     bookAptment: "Book appointment with Dr. Hassan",
+    group: 1,
+  },
+  {
+    img: DrUmar,
+    imgTag: "Cardiologist",
+    name: "Dr. Umar Azar",
+    // niche: "M.D., Harvard University",
+    niche: "Cardiologist (M.D)",
+    experience: "10+ years of experience in cardiology",
+    rating: fiveStars,
+    bookAptment: "Book appointment with Dr. Umar",
+    group: 2,
+  },
+  {
+    img: DrEmily,
+    imgTag: "Gynaecologist",
+    name: "Dr. Emily Brown",
+    // niche: "M.D., Johns Hopkins University",
+    niche: "Gynaecologist (M.D)",
+    experience: "10+ years of experience in Gynaecology",
+    rating: fourStars,
+    bookAptment: "Book appointment with Dr. Emily",
+    group: 2,
+  },
+  {
+    img: DrHassan,
+    imgTag: "Andrologist",
+    name: "Dr. Umar Azar",
+    // niche: "M.D., Stanford University",
+    niche: "Andrologist (M.D)",
+    experience: "10+ years of experience in Andrology",
+    rating: fourPointFiveStars,
+    bookAptment: "Book appointment with Dr. Hassan",
+    group: 2,
+  },
+  {
+    img: DrUmar,
+    imgTag: "Cardiologist",
+    name: "Dr. Umar Azar",
+    // niche: "M.D., Harvard University",
+    niche: "Cardiologist (M.D)",
+    experience: "10+ years of experience in cardiology",
+    rating: fiveStars,
+    bookAptment: "Book appointment with Dr. Umar",
+    group: 3,
+  },
+  {
+    img: DrEmily,
+    imgTag: "Gynaecologist",
+    name: "Dr. Emily Brown",
+    // niche: "M.D., Johns Hopkins University",
+    niche: "Gynaecologist (M.D)",
+    experience: "10+ years of experience in Gynaecology",
+    rating: fourStars,
+    bookAptment: "Book appointment with Dr. Emily",
+    group: 3,
+  },
+  {
+    img: DrHassan,
+    imgTag: "Andrologist",
+    name: "Dr. Umar Azar",
+    // niche: "M.D., Stanford University",
+    niche: "Andrologist (M.D)",
+    experience: "10+ years of experience in Andrology",
+    rating: fourPointFiveStars,
+    bookAptment: "Book appointment with Dr. Hassan",
+    group: 3,
   },
 ];
+
+const expGroupOne = expertData.filter((data) => data.group === 1);
 
 const Experts = () => {
   return (
@@ -52,26 +139,8 @@ const Experts = () => {
         <img src={viewAllImg} alt="" />
       </div>
       <div className={`${styles.experts} pt-10`}>
-        {expertData.map((datum, i) => (
-          <div className={styles.expert} key={i}>
-            <div className="overflow-hidden">
-              <img width={440} height={290} alt="" src={datum.img} />
-            </div>
-            <span className={styles.imgTag}>{datum.imgTag}</span>
-            <div className="flex flex-col gap-4">
-              <div className="pt-2">
-                <h3 className="font-bold text-[24px]">{datum.name}</h3>
-                <p className="text-[14px] text-[#5C5C5C]">
-                  {datum.attendedInst}
-                </p>
-              </div>
-              <div>
-                <button className={styles.bookAptmentBtn}>
-                  {datum.bookAptment}
-                </button>
-              </div>
-            </div>
-          </div>
+        {expGroupOne.map((data) => (
+          <ExpertCard data={data} />
         ))}
       </div>
     </section>

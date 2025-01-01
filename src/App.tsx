@@ -6,7 +6,10 @@ import Resources from "./pages/Resources/Resources";
 import Layout from "./pages/Layout/Layout";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from "react";
+import SignIn from "./pages/SignIn/SignIn";
+import SignUp from "./pages/SignUp/SignUp";
+import ForgotPass from "./pages/ForgotPass/ForgotPass";
+import ExpertInfo from "./components/ExpertInfo/ExpertInfo";
 
 function App() {
   return (
@@ -18,6 +21,10 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/appointment" element={<Appointment />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/forgot-password" element={<ForgotPass />} />
+          <Route path="/expert-info" element={<ExpertInfo />} />
         </Route>
       </Routes>
     </BrowserRouter>

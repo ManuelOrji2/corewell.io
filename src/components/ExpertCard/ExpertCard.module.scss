@@ -1,0 +1,50 @@
+.expert {
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+
+  .expImg {
+    filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .imgTag {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    background-color: #fff;
+    padding: 10px 12px;
+  }
+
+  .detailIcon {
+    filter: grayscale(100%);
+  }
+
+  .bookAptmentBtn {
+    width: 100%;
+    background-color: #d6ff01;
+    padding: 15px 20px;
+  }
+}
+
+.expert:hover {
+  .expImg {
+    filter: none;
+    transform: scale(1.1);
+    overflow: hidden;
+  }
+  .detailIcon {
+    animation: blink 0.9s infinite;
+  }
+}
+
+@keyframes blink {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+    filter: none;
+  }
+}
